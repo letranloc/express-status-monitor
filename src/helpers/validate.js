@@ -30,6 +30,8 @@ module.exports = config => {
     typeof config.websocket === 'object'
       ? config.websocket
       : defaultConfig.websocket;
+  config.socketNamespace =
+      typeof config.socketNamespace === 'string' ? config.socketNamespace : defaultConfig.socketNamespace;
   config.iframe =
     typeof config.iframe === 'boolean' ? config.iframe : defaultConfig.iframe;
   config.chartVisibility =
